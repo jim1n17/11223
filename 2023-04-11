@@ -1,0 +1,10 @@
+package jimin;
+
+public class cjm {
+
+	public static void main(String[] args) {
+         int n = 18;
+         System.out.println(n);		
+	}
+
+}
