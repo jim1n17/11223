@@ -1,0 +1,5 @@
+  score = [86, 55, 48, 27, 99, 100]
+
+for a in range(len(score)):
+  if a%2 == 1 :
+    print(score[a], end="")
