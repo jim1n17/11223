@@ -1,0 +1,10 @@
+button = 1
+
+if button == 1 :
+  print("사자")
+elif button == 2 :
+  print("호랑이")
+elif button == 3 :
+  print("곰")
+else :
+  print("끝")
