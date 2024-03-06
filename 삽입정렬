@@ -1,0 +1,24 @@
+package sort;
+
+import java.util.Arrays;
+
+public class sort2 {
+	public static void main(String[] args) {
+		int[] arr = new int[] {31, 25, 12, 22, 11};
+//                 밑에껄하기위한 배열
+		for (int i = 1; i < arr.length; i++) {
+// 					인덱스 값			
+			for (int j = i; j > 0; j--) { 
+				if (arr[j-1] > arr[j]) {
+// 					비교
+					int temp = arr[j-1];
+					arr[j-1] = arr[j];
+					arr[j] = temp;
+//					뒤에값을 옮기고 앞에 있는값을 뒤로
+				}
+			}
+		}
+		System.out.println(Arrays.toString(arr));
+	}
+}
+
