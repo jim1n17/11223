@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td { border:1px solid black}
+</style>
+<meta charset="UTF-8">
+<title>백신접종예약</title>
+</head>
+<body>
+<form name="rData" action="" method="post">
+<table>
+<tr>
+    <th>예약번호</th>    <td><input type="text" name="rNum"> 예)20210011 </td>
+</tr>
+<tr>
+    <th>주민번호</th>    <td><input type="text" name="jNum"> 예)790101-1111111 </td>    
+</tr>
+<tr>
+    <th>백신코드</th>
+    <td> <select name="vCode">
+             <option value="">백신선택</option>
+             <option value="V001">A백신</option>
+             <option value="V002">B백신</option>
+             <option value="V003">C백신</option> </select>
+             예)V001, V002, V003            
+    </td>        
+</tr>
+<tr>
+    <th>병원코드</th>
+    <td> <label><input type="radio" name="hCode" value="H001">가_병원</label>
+         <label><input type="radio" name="hCode" value="H002">나_병원</label>
+         <label><input type="radio" name="hCode" value="H003">다_병원</label>
+         <label><input type="radio" name="hCode" value="H004">라_병원</label>
+         예)H001, H002, H003, H004
+    </td>
+</tr>
+<tr>
+    <th>병원코드</th>    
+    <td> <label><input type="checkbox" name="hCode" value="H001">가_병원</label>
+         <label><input type="checkbox" name="hCode" value="H002">나_병원</label>
+         <label><input type="checkbox" name="hCode" value="H003">다_병원</label>
+         <label><input type="checkbox" name="hCode" value="H004">라_병원</label>
+          예)H001, H002, H003, H004
+    </td>
+</tr>
+<tr>
+    <th>예약날짜</th>
+    <td><input type="text" name="rDate"> 예)20210101 </td>
+</tr>
+<tr>
+    <th>예약시간</th>    
+    <td><input type="text" name="rTime"> 예)0930, 1130 </td>
+</tr>
+<tr>
+    <th colspan="2">
+        <input type="submit" value="등록"> <input type="reset" value="취소">        
+    </th>
+</tr>
+</table>
+</form>
+</body>
+</html>
+
+table.html
+HTML
+수업 댓글 2개
+
+21120정인서오후 4:07
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>병원 등록창</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+<link rel="preconnect" href="https://fonts.gstatic.com&quot; crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap&quot; rel="stylesheet">
+
+<style>
+    table {
+        border-collapse : collapse
+        }
+   
+    .Vtable {
+        position: absolute;
+          top: 40%;
+          left: 23%;
+          margin: -25px 0 0 -25px;
+    }
+   
+    .Vtitle {
+        position: absolute;
+          top: 25%;
+          left: 33%;
+          margin: -25px 0 50 -25px;
+          border-radius: 25px;
+          padding : 0 120px 0;
+        top: 15%;
+        background-color : white;
+        color : #895cf3;
+        box-shadow: 0 0 0 1px black;
+    }
+   
+    body {
+        height: 100vh;
+        background: linear-gradient(#895cf3 50%, #15191f 50%);
+    }
+   
+   
+    * {
+        font-family: "Jua", sans-serif;
+    }
+   
+    th {
+        background-color : #15191f;
+        color : white;
+        letter-spacing:5px;
+    }
+   
+    td {
+        background-color : #15191f;
+        color : white;
+        letter-spacing:2px;
+    }
+   
+    .button:hover {
+        background-color : #895cf3;
+        color : white;
+    }
+   
+    .text {
+        border-radius: 5px;
+        border : none;
+    }
+</style>
+   
+</head>
+<body>
+    <div class="Vtitle">
+        <h1>reservation</h1>
+    </div>
+    <h2 style="text-align: right">21120 정인서</h2>
+   
+    <form name="rData" action="" method="post">
+    <table width = 60% height = 60% class = "Vtable" style="background-color:white">
+        <tr>
+            <th>예약번호</th>
+            <td><input type="text" placeholder="예)20210011" class="text"></input></td>
+           
+        </tr>
+        <tr>
+            <th>주민번호</th>
+            <td><input type="text" maxlength="14" placeholder="예)790101-1111111" class="text"></input></td>
+        </tr>
+        <tr>
+            <th>백신코드</th>
+            <td>
+                <select name="V">
+                    <option value="1" selected> 백신선택
+                    <option value="2"> A백신
+                    <option value="3"> B백신
+                    <option value="4"> C백신
+                </select>
+        </tr>
+        <tr>
+            <th>병원코드</th>
+            <td><input type = "radio" name="hos"> 가_병원</input><input type = "radio" name="hos"> 나_병원</input><input type = "radio" name="hos"> 다_병원</input><input type = "radio" name="hos"> 라_병원</input></td>
+       
+        </tr>
+        <tr>
+            <th>병원코드</th>
+            <td><input type = "checkbox" name="hos2"> 가_병원</input><input type = "checkbox" name="hos2"> 나_병원</input><input type = "checkbox" name="hos3"> 다_병원</input><input type = "checkbox" name="hos4"> 라_병원</input></td>
+        </tr>
+       
+        <tr>
+            <th>예약날짜</th>
+            <td><input type="text" placeholder="예)20210101" class="text"></input></td>
+        </tr>
+       
+        <tr>
+            <th>예약시간</th>
+            <td><input type="text" maxlength="4" placeholder="예)0930, 1130" class="text"></input></td>
+        </tr>
+       
+        <tr>
+                <td colspan = "2" style = "text-align: center"><input type="submit" value="        등록          " class="button">            <input type="reset" value="         취소          " class="button"></input></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
+
+21117이서영오후 4:08
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vaccine reservation</title>
+<style>
+   table, th, td {
+       border: 1px solid;
+   }
+   
+   th, td {
+       height:20px;
+       border-color: white;
+   }
+   
+   table {
+       width: 650px;
+       border-color: yellowgreen;
+       background-color: yellowgreen;
+   }
+   
+   th {
+       width : 15%;
+       background-color: yellowgreen;
+   }
+   
+   td {
+       width : 85%;
+       padding : 5px;
+       background-color: ghostwhite;
+   }
+   
+   input {
+       border-radius: 5px;
+   }
+   
+   .buttons {
+       text-align: center;
+       border-collapse: collapse;
+       background-color: rgb(204, 238, 125);
+   }
+   
+   td:hover {
+    background-color: rgb(204, 238, 125);
+   }
+   
+   label:hover {
+    background-color: #FFF830;
+    color: black;
+    font-weight: bold;
+   }
+   
+   button:hover {
+       background-color: #FFF830;
+       border: 1px solid #FFF8a0;
+       box-shadow: #7F7C21 -4px 4px;
+       transform: translate3d(6px, -6px, 0);
+   }
+</style>
+</head>
+<body>
+   <form name="rData" action="#" method="post">
+       <table>
+           <tr>
+               <th>예약번호</th>
+               <td><input type="text" name="rNum"> 예)20210011</td>
+           </tr>
+           <tr>
+               <th>주민번호</th>
+               <td><input type="text" name="rJuNum"> 예)790101-1111111</td>
+           </tr>
+           <tr>
+               <th>백신코드</th>
+               <td>
+                   <select>
+                       <option selected>백신선택</option>
+                       <option value="V001">A백신</option>
+                       <option value="V002">B백신</option>
+                       <option value="V003">C백신</option>
+                   </select>
+                   예)V001, V002, V003
+               </td>
+           </tr>
+           <tr>
+               <th>병원코드</th>
+               <td>
+                   <label for="ga_hos_radio"><input type="radio" name="select_hos" id="ga_hos_radio" value="H001">가_병원</label>
+                   <label for="na_hos_radio"><input type="radio" name="select_hos" id="na_hos_radio" value="H002">나_병원</label>
+                   <label for="da_hos_radio"><input type="radio" name="select_hos" id="da_hos_radio" value="H003">다_병원</label>
+                   <label for="la_hos_radio"><input type="radio" name="select_hos" id="la_hos_radio" value="H004">라_병원</label>
+                   예)H001, H002, H003, H004
+               </td>
+           </tr>
+           <tr>
+               <th>병원코드</th>
+               <td>
+                   <label for="ga_hos_check"><input type="checkbox" name="select_hos" id="ga_hos_check" value="H001">가_병원</label>
+                   <label for="na_hos_check"><input type="checkbox" name="select_hos" id="na_hos_check" value="H002">나_병원</label>
+                   <label for="da_hos_check"><input type="checkbox" name="select_hos" id="da_hos_check" value="H003">다_병원</label>
+                   <label for="la_hos_check"><input type="checkbox" name="select_hos" id="la_hos_check" value="H004">라_병원</label>
+                   예)H001, H002, H003, H004
+               </td>
+           </tr>
+           <tr>
+               <th>예약날짜</th>
+               <td><input type="text" name="rDate"> 예)20210101</td>
+           </tr>
+           <tr>
+               <th>예약시간</th>
+               <td><input type="text" name="rTime"> 예)0920, 1130</td>
+           </tr>
+           <tr>
+               <td colspan="2" class="buttons">
+                   <button type="submit">등록</button>
+                   <button type="reset">취소</button>
+               </td>
+           </tr>
+       </table>
+   </form>
+</body>
+</html>
