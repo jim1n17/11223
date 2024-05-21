@@ -1,0 +1,21 @@
+package _0512;
+
+public class GameMain {
+
+	public static void main(String[] args) {
+		Hero h1;
+		h1 = new Hero();
+		
+		System.out.println("영웅 이름 :"+h1.get이름());
+		System.out.println("영웅 이름 :"+h1.get공격력());
+		System.out.println("영웅 이름 :"+h1.get체력());
+		System.out.println("영웅 이름 :"+h1.get마나());
+		
+		Hero h2 = new Hero("최지민", 99);
+		
+		h1.공격(h2);
+		h1.몸통박치기(h2);
+		h2.몸통박치기(h1);
+	}
+
+}
