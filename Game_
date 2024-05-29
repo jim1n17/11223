@@ -1,0 +1,46 @@
+package main;
+
+public class Player {
+	String 이름;
+	int 체력;
+	int 공격력;
+	
+	public Player(String 이름) {
+		this(80, 30, 이름);
+	}
+
+	public Player(int 체력, int 공격력, String 이름) {
+		this.체력 = 체력;
+		this.공격력 = 공격력;
+		this.이름 = 이름;
+	}
+
+	
+	
+	public String get이름() {
+		return 이름;
+	}
+	public void set이름(String 이름) {
+		this.이름 = 이름;
+	}
+	public int get체력() {
+		return 체력;
+	}
+	public void set체력(int 체력) {
+		this.체력 = 체력;
+	}
+	public int get공격력() {
+		return 공격력;
+	}
+	public void set공격력(int 공격력) {
+		this.공격력 = 공격력;
+	}
+
+	void 공격(Player 적) {
+
+		적.체력 -= 공격력;
+	}
+	void 상태출력() {
+		System.out.printf("%s 의 현재 체력: %d, 공격력: %");
+	}
+}
