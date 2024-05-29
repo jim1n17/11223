@@ -1,0 +1,29 @@
+package main;
+
+public class Game {
+
+	public static void main(String[] args) {
+		Player 나 = new Player(100, 80, "정연택");
+		Player 적군 = new Player("최지민");
+		
+		
+		while(true) {
+			int 내체력 = 나.get체력();
+			int 적체력 = 적군.get체력();
+			
+			나.공격(적군);
+			System.out.println("내체력:"+내체력+", 적체력: "+적체력);
+			적군.공격(나);
+			System.out.println("내체력:"+내체력+", 적체력: "+적체력);
+			
+			if(나.get체력()<=0) {
+				System.out.println(적군.get이름()+" 승리!");
+				break;
+			} else if(적군.get체력()<=0) {
+				System.out.println(나.get이름()+" 승리!");
+				break;
+			}
+		}
+	}
+
+}
